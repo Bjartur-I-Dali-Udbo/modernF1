@@ -1,7 +1,9 @@
 # F1_analytics
-Hobbyist project on historical trends in Formula 1 and exploring deeper into data, where modern motorsport data-journalism does not necessarily take all conditions into consideration.
+Hobbyist project on historical trends in Formula 1 and providing proper insights, where modern motorsport data-journalism usually neglects important factors. I 
+
 
 # Data acquisition
+If you are not a nerdy fan of the layout steps for the scientific method, I advise you to skip this part. To your important inormation this highly critical part of this scientific project, was not written with passionate love for the most repeated standard procedure known to manking.
 ### **Ergast API** (https://ergast.com/mrd/) Now deprecated
   - Season List, Race Schedule  
   - Qualifying Results, Sprint Qualifying Results  
