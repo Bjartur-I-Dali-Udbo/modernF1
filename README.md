@@ -1,6 +1,8 @@
 # F1_analytics
 Hobbyist project on historical trends in Formula 1 and providing insights, where modern motorsport data-journalism usually neglects important factors.
 
+### Upcoming content.
+- Driver specific stats.
 
 # Qualification Dominance
 Throughout each race for a whole season, are the best qualifying times of each team entrant compared to one another, the time difference to the best team are modified to percentages to maintain a comparative scale. If the best team sets a time of 100 seconds and the second fastest team sets a time of 101 seconds -- Pole setter gets a score of 0% - while the second fastest team gets a score of 1%, while constructors with slower times get even higher percentage scores. For the whole season is the mean score calculated for each constructor. If a team happened to set pole position in every race event, they would always receive a score of 0% and have a mean of 0%.
@@ -33,7 +35,7 @@ The 1975 Maki team immediately jumps to a standard deviation from less than 5 in
 
 #
 # Data acquisition
-If you are a fan of the totally not borings layout steps for the scientific method, I advise you to read this part. To your important information, this part of this scientific project, was not written with passionate love for the most repeated standard procedure known to manking and I was very thorough to do it correctly the first time. (it is not fun :( )
+If you are a fan of the totally not borings layout steps for the scientific method, I advise you to read this part. To your important information, this part of this scientific project, was not written with passionate love for the most repeated standard procedure known to manking and I was very thorough to do it correctly the first time, so I won't have to do it again.
 
 ### **Ergast API** (https://ergast.com/mrd/) Now deprecated
   - Season List, Race Schedule  
@@ -94,3 +96,7 @@ Ergast and f1db databases are largely identical, but there are cases in Ergast n
 - First and last name of driver.  
 
 Drivers used to be able to share a seat and swap during tire changes - this happened regularily in the earlier years of Formula 1 World Championship. So there are instances of drivers having multiple finish positions as they contributed in more than one car at the same race.
+
+## Data not used
+- 1950-1960 Indianapolis 500
+ - Only Nino Farina entered the Indianapolis 500 while driving a full season in F1, while most Indianapolis 500 teams did not participate in F1 at all. Thus are these results not included in the analysis.
