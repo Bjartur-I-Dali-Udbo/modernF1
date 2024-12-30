@@ -41,6 +41,7 @@ When adjusting for field pace (Z-Tests), are the advantages shuffled a bit, the 
 
 The 1988 McLaren qualifying advantage to the rest of its field, is smaller than what the team had in its three of its next four seasons; **1989 (MP4/5)**, 1990 (MP5/5B), **1991 (MP4/6)** and **1992 (MP4/6B)** - this is an absolute shock to me, but it does make sense because many new teams were entering F1 during this period with operations they were not prepared for, **a large increase in very slow entries/anomalies _will_ weaken the robust-Z-Test as the times set by teams will clearly be distributed into the _existing_ field and a larger gap to _new entries_ trying to catch up.** The method can handle a few anomalies, but two separate groups of data skews it so one standard deviation covers a greater time span - consequently will the front runners have a smaller Z-Score.
 
+When adjusting for new teams, would the Williams FW14B also get a Z-Score that pushes it even furter away from its respective field, so I believe it is a fair and valid conclusion to state the Williams FW14B as the most dominant and least challenged Formula 1 car when it comes to qualifying performance in terms of times set.
 
 #
 # Data acquisition
