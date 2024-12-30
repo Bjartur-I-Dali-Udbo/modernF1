@@ -1,7 +1,36 @@
 # F1_analytics
-Hobbyist project on historical trends in Formula 1 and providing proper insights, where modern motorsport data-journalism usually neglects important factors. I 
+Hobbyist project on historical trends in Formula 1 and providing insights, where modern motorsport data-journalism usually neglects important factors.
+
+# Qualification Dominance
+Throughout each race for a whole season, are the best qualifying times of each team entrant compared to one another, the time difference to the best team are modified to percentages to maintain a comparative scale. If the best team sets a time of 100 seconds and the second fastest team sets a time of 101 seconds -- Pole setter gets a score of 0% - while the second fastest team gets a score of 1%, while constructors with slower times get even higher percentage scores. For the whole season is the mean score calculated for each constructor. If a team happened to set pole position in every race event, they would always receive a score of 0% and have a mean of 0%.
+## Calculating percentage advantage
+On average the top team acquires pole most frequently or are within 0.3% of the pole time in every qualification session, providing a seasonal average of around 0.15% away from the pole time. The advantage estimate is how much lower this value is to the closest competitor. Lets say the second fastest team has a score of 0.7%. That is a difference of 0.55%. This difference is displayed below, were the fastest teams' score is shown relative to the second fastest.
+
+![Percentage gaps visualised](figures/Fig_diffPCT_restricted_vertical_limits.png?raw=true)
+
+The most recent extreme domination in qualifying, was during the first three seasons of the V6-Hybrid-Engines, where Mercedes almost had a 1% qualifying pace advantage across three straight seasons, but is incomporable to the the late 1980s and early 1990s seasons of McLaren and Williams teams, whom were pusing towards 2%. While Alfa Romeo and Ferrari had significant advantages in the 1950s, a period with few constructors.
+This method does exemplify the biggest difference on absolute time, but does not take into account if perhaps _two_ teams are leagues above the rest and only battling with eachother, _The Percentage Advantage_ would not be great and thus not materialise with this method.
+
+## Standardisation of qualifying times (Z-Test)
+
+Standard scores or Z-Scores, instead finds the standard deviation of all times (Only best time of each team). Which then scales the dots by how many standard deviations each team deviates from the average. This allows more than one team to be very far ahead of the rest, because this approach better presents each carmakers gap to _the average performance of the whole field_ rather than just the closest opponent.
+
+![Standard Scores (Z-Scores) visualised](figures/Fig_Z_Scores_restricted_vertical_limits.png?raw=true)
+
+Williams and McLaren of the late-1980s and early-1990s are still dominant, but Alfa Romeo and Ferrari in the 1950s lose their gap by quite a margin. Another notable appearance is 2020 Mercedes, a vehicle many fans remembers as a dominant force no one could touch. This model does show that this season Mercedes had an advantage on par with their 2014-2016 advantage. 
+
+## Robust standardisation of qualifying times (Robust Z-Test)
+
+The above approach uses all data, but also allows all data to be equally impactful to the dataset, thus allowing anomalies to skew data in one direction and modify the standard deviation used to quantify the standard scores.
+
+A robust method, instead uses the median and eliminates the extreme impact of an anomaly like a backmarker team not in contention with any other teams.
+
+![Robust Standard Scores (Robust-Z-Scores) visualised](figures/Fig_Robust_Z_Scores_restricted_vertical_limits.png?raw=true)
+
+The 1975 Maki team immediately jumps to a standard deviation from less than 5 in a regular Z-Test to beyond 20 in the robust Z-Test. This absolute increase in values is prominent in almost all seasons as far more teams are closer to five robust-standard-deviatons, compared to only 2 in the normal method. To my surprise did the 2020 Mercedes jump ahead of any other Mercedes car, even though their percentage advantage was closer to 0.3% - this is a result of the remaining field being very close to another while Mercedes' gap to that field was proportionally large. Another notable surprise to me, is that Ferrari does not have a great advantage to the field in 2004, even though they had a notable gap in percentages. Signalling that the 2004 field was very spread out. While the 2000 season had bot McLaren and Ferrari duke it ou all year while being heads above the rest.
 
 
+#
 # Data acquisition
 If you are not a nerdy fan of the layout steps for the scientific method, I advise you to skip this part. To your important inormation this highly critical part of this scientific project, was not written with passionate love for the most repeated standard procedure known to manking.
 ### **Ergast API** (https://ergast.com/mrd/) Now deprecated
@@ -81,8 +110,3 @@ The former method by using qualification or race results, most frequently draws 
 - 2022-2023 Red Bull
 
 However this approach does not quantify actual pace. Often brought up counter points in these comparisons are the 1992, 1993 Williams cars and 2020 Mercedes car. Which are renowned for their pace in relation to the rest of the Formula 1 field. All three cars acquired a high rate of pole positions and wins, but not within the realm of the 1988, 2022 and 2023 blow outs. But are they worthy of being spoken of as some of the best ever, when they did not produce as many championship points one would expect from such performance?
-
-### Percentage gap to closest competitor.
-Throughout each race for a whole season, are the best times of each constructor compared to one another, the time difference to the best team are scaled in percentages to maintain comparative units. If the best team sets a time of 100 seconds and the second fastest team sets a time of 101 seconds -- the second fastest team gets a score of 1%, while the constructors with slower times get even higher scores. Pole setter gets a score of 0%. For the whole season is the mean score calculated for each constructor. If a team happened to set pole position in every race event, they would always receive a score of 0% and have a mean of 0%.
-
-**For plotting the gap to the closest competitor,** the are scales shifted to make *relative* percentage to second fastest team, this better exemplifies the percentage advantages across seasons.
