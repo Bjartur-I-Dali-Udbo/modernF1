@@ -1,6 +1,7 @@
 # F1_analytics
 Hobbyist project on historical trends in Formula 1 and providing insights, where modern motorsport data-journalism usually neglects important factors.
 
+
 # Qualification Dominance
 Throughout each race for a whole season, are the best qualifying times of each team entrant compared to one another, the time difference to the best team are modified to percentages to maintain a comparative scale. If the best team sets a time of 100 seconds and the second fastest team sets a time of 101 seconds -- Pole setter gets a score of 0% - while the second fastest team gets a score of 1%, while constructors with slower times get even higher percentage scores. For the whole season is the mean score calculated for each constructor. If a team happened to set pole position in every race event, they would always receive a score of 0% and have a mean of 0%.
 ## Calculating percentage advantage
