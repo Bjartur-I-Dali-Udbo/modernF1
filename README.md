@@ -5,9 +5,11 @@ Hobbyist project on historical trends in Formula 1 and providing insights, where
 - Driver specific stats.
 
 # Qualification Dominance
-Throughout each race for a whole season, are the best qualifying times of each team entrant compared to one another, the time difference to the best team are modified to percentages to maintain a comparative scale. If the best team sets a time of 100 seconds and the second fastest team sets a time of 101 seconds -- Pole setter gets a score of 0% - while the second fastest team gets a score of 1%, while constructors with slower times get even higher percentage scores. For the whole season is the mean score calculated for each constructor. If a team happened to set pole position in every race event, they would always receive a score of 0% and have a mean of 0%.
+In countless of motorsport journalistic publications, reddit posts and other hobbyists I often see them exclusively use the overall rate of attaining pole position as a metric for how fast a car was at qualifying, without taking into consideration that this car could have gotten its statistic not in a dominant fashion. Other times are such opinions aided by converting gaps in qualifying times between cars into percentage units - which is quantifiable measure and far more robust to estimate _how fast_ a team is. But even, I still do not think this is good enough.
+
+
 ## Calculating percentage advantage
-On average the top team acquires pole most frequently or are within 0.3% of the pole time in every qualification session, providing a seasonal average of around 0.15% away from the pole time. The advantage estimate is how much lower this value is to the closest competitor. Lets say the second fastest team has a score of 0.7%. That is a difference of 0.55%. This difference is displayed below, were the fastest teams' score is shown relative to the second fastest.
+On average the top team acquires pole most frequently or are within 0.3% of the pole time in every qualification session, providing a seasonal average of around 0.15% away from the pole time. The advantage estimate is how much lower this average value is to the closest competitors averae. Lets say the second fastest team has a score of 0.7% compared to your 0.15%, that is a difference of 0.55%. This difference is displayed below, were the fastest teams' score is shown relative to the second fastest.
 
 ![Percentage gaps visualised](figures/Fig_diffPCT_restricted_vertical_limits.png?raw=true)
 
