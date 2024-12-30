@@ -32,7 +32,8 @@ The 1975 Maki team immediately jumps to a standard deviation from less than 5 in
 
 #
 # Data acquisition
-If you are not a nerdy fan of the layout steps for the scientific method, I advise you to skip this part. To your important inormation this highly critical part of this scientific project, was not written with passionate love for the most repeated standard procedure known to manking.
+If you are a fan of the totally not borings layout steps for the scientific method, I advise you to read this part. To your important information, this part of this scientific project, was not written with passionate love for the most repeated standard procedure known to manking and I was very thorough to do it correctly the first time. (it is not fun :( )
+
 ### **Ergast API** (https://ergast.com/mrd/) Now deprecated
   - Season List, Race Schedule  
   - Qualifying Results, Sprint Qualifying Results  
@@ -52,7 +53,7 @@ If you are not a nerdy fan of the layout steps for the scientific method, I advi
      - qualifying and pre-qualifying results  
      - sprint race results  
      - starting grid positions  
-     - race results  
+     - race results  1
      - fastest laps  
      - pit stops  
      - driver of the day results  
@@ -92,21 +93,3 @@ Ergast and f1db databases are largely identical, but there are cases in Ergast n
 - First and last name of driver.  
 
 Drivers used to be able to share a seat and swap during tire changes - this happened regularily in the earlier years of Formula 1 World Championship. So there are instances of drivers having multiple finish positions as they contributed in more than one car at the same race.
-
-
-# Qualification analysis
-
-## Seasonal performance of constructors based on best qualification time set by any of the drivers.
-
-The most frequently used meausring stick to determine best cars in Formula 1, is to use the number of wins acquired in a season, or how many pole positions they acheived. Other times are the supertimes used, which are the fastest times set by a team in any of the sessions in a race week. Then measure the absolute time difference to their closest competitor, usually in percentage terms.
-
-The former method by using qualification or race results, most frequently draws in the following seasons as those with the best cars.  
-- 1988 McLaren
-- 2002 Ferrari
-- 2004 Ferrari
-- 2011 Red Bull
-- 2013 Red Bull
-- 2014-2016 Mercedes.
-- 2022-2023 Red Bull
-
-However this approach does not quantify actual pace. Often brought up counter points in these comparisons are the 1992, 1993 Williams cars and 2020 Mercedes car. Which are renowned for their pace in relation to the rest of the Formula 1 field. All three cars acquired a high rate of pole positions and wins, but not within the realm of the 1988, 2022 and 2023 blow outs. But are they worthy of being spoken of as some of the best ever, when they did not produce as many championship points one would expect from such performance?
