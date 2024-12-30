@@ -50,6 +50,8 @@ Based on Z-scores and absolute percentage advantages, are the FW14B and FW15C in
 
 The 1988 McLaren qualifying advantage to the rest of its field, is smaller than what the team had in three of its next four seasons; **1989 (MP4/5)**, 1990 (MP5/5B), **1991 (MP4/6)** and **1992 (MP4/6B)** - this is an absolute shock to me, but it does make sense because many new teams were entering F1 during this period with operations they were not prepared for, **a large increase in slow entries/anomalies _will_ weaken the robust-Z-Test as the times set by newly establised and slower teams will distribute qualifying times into; _new entries_ trying to catch up which are clearly gapped by the _existing_ field.** The robust method can handle a few anomalies, but two separate groups of data skews it so one standard deviation covers a greater time span - consequently will the top qualifiers have a greater Z-Score, giving an illusion of very strong development in the teams performance compared to the rest of the field.
 
+Additionally are these data strictly seasonally dependent. There are instances of teams using their past years' car in the early races of the Formula 1 calendar, before introducing a finished chassis or their engine provider introduces a new engine. These are changes I have not addressed in this presentation.
+
 #
 # Data acquisition
 If you are a fan of the totally not borings layout steps for the scientific method, I advise you to read this part. To your important information, this part of this scientific project, was not written with passionate love for the most repeated standard procedure known to manking and I was very thorough to do it correctly the first time, so I won't have to do it again.
