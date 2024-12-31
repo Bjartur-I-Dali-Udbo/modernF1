@@ -6,8 +6,8 @@ Hobbyist project on historical trends in Formula 1 and providing insights, where
 
 # Table Of Contents
 
-1. [Qualification Dominance](https://github.com/92FO/modernF1/edit/main/README.md#1-qualification-dominance)  
-   1.1. [Percentage pace advantage to closest competitor](https://github.com/92FO/modernF1/edit/main/README.md#11-percentage-pace-advantage-to-closest-competitor)  
+1. [Qualification Dominance](https://github.com/92FO/modernF1/main/README.md#1-qualification-dominance)  
+   1.1. [Percentage pace advantage to closest competitor](https://github.com/92FO/modernF1/main/README.md#11-percentage-pace-advantage-to-closest-competitor)  
    1.2. [Standard score (Z-Test) advantage of the field](https://github.com/92FO/modernF1/edit/main/README.md#standardisation-of-qualifying-times-z-test)  
    1.3. [Robust standard score (Robust Z-Test) advantage to the field](https://github.com/92FO/modernF1/edit/main/README.md#robust-standardisation-of-qualifying-times-robust-z-test)
 
