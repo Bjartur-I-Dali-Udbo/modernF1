@@ -1,14 +1,21 @@
-# F1_analytics
+# modernF1
 Hobbyist project on historical trends in Formula 1 and providing insights, where modern motorsport data-journalism usually neglects important factors.
 
 ### Upcoming content.
 - Driver specific stats.
 
-# Qualification Dominance
+# Table Of Contents
+
+1. [Qualification Dominance](https://github.com/92FO/modernF1/edit/main/README.md#1-qualification-dominance)  
+   1.1. [Percentage pace advantage to closest competitor](https://github.com/92FO/modernF1/edit/main/README.md#11-percentage-pace-advantage-to-closest-competitor)  
+   1.2. [Standard score (Z-Test) advantage of the field](https://github.com/92FO/modernF1/edit/main/README.md#standardisation-of-qualifying-times-z-test)  
+   1.3. [Robust standard score (Robust Z-Test) advantage to the field](https://github.com/92FO/modernF1/edit/main/README.md#robust-standardisation-of-qualifying-times-robust-z-test)
+
+# 1. Qualification Dominance
 In countless of motorsport journalistic publications, reddit posts and other hobbyists I often see them exclusively use the overall rate of attaining pole position as a metric for how fast a car was at qualifying, without taking into consideration that this car could have gotten its statistic not in a dominant fashion. Other times are such opinions aided by converting gaps in qualifying times between cars into percentage units - which is quantifiable measure and far more robust to estimate _how fast_ a team is. But even, I still do not think this is good enough.
 
 
-## Calculating percentage advantage
+## 1.1. Percentage pace advantage to closest competitor
 On average the top team acquires pole most frequently or are within 0.3% of the pole time in every qualification session, providing a seasonal average of around 0.15% away from the pole time. The advantage estimate is how much lower this average value is to the closest competitors averae. Lets say the second fastest team has a score of 0.7% compared to your 0.15%, that is a difference of 0.55%. This difference is displayed below, were the fastest teams' score is shown relative to the second fastest.
 
 ![Percentage gaps visualised](figures/Fig_diffPCT_restricted_vertical_limits.png?raw=true)
@@ -16,7 +23,7 @@ On average the top team acquires pole most frequently or are within 0.3% of the 
 The most recent extreme domination in qualifying, was during the first three seasons of the V6-Hybrid-Engines, where Mercedes almost had a 1% qualifying pace advantage across three straight seasons, but is incomporable to the the late 1980s and early 1990s seasons of McLaren and Williams teams, whom were pusing towards 2%. While Alfa Romeo and Ferrari had significant advantages in the 1950s, a period with few constructors.
 This method does exemplify the biggest difference on absolute time, but does not take into account if perhaps _two_ teams are leagues above the rest and only battling with each other, _The Percentage Advantage_ would not be great and thus not materialise with this method.
 
-## Standardisation of qualifying times (Z-Test)
+## 1.2. Standard score (Z-Test) advantage of the field
 
 Standard scores or Z-Scores, instead finds the standard deviation of all times (Only best time of each team). Which then scales the dots by how many standard deviations each team deviates from the average. This allows more than one team to be very far ahead of the rest, because this approach better presents each carmakers gap to _the average performance of the whole field_ rather than just the closest opponent.
 
@@ -24,7 +31,7 @@ Standard scores or Z-Scores, instead finds the standard deviation of all times (
 
 Williams and McLaren of the late-1980s and early-1990s are still dominant, but Alfa Romeo and Ferrari in the 1950s lose their gap by quite a margin. Another notable appearance is 2020 Mercedes, a vehicle many fans remembers as a dominant force no one could touch. This model does show that this season Mercedes had an advantage on par with their 2014-2016 advantage. 
 
-## Robust standardisation of qualifying times (Robust Z-Test)
+## 1.3. Robust standard score (Robust Z-Test) advantage to the field
 
 The above approach uses all data, but also allows all data to be equally impactful to the dataset, thus allowing anomalies to skew data in one direction and modify the standard deviation used to quantify the standard scores.
 
