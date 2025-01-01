@@ -1,6 +1,4 @@
-# Contents
-- [Contents](#contents)
-- [Upcoming content.](#upcoming-content)
+- [Planned content.](#planned-content)
 - [1. Qualification Dominance](#1-qualification-dominance)
   - [1.1. Percentage pace advantage to closest competitor](#11-percentage-pace-advantage-to-closest-competitor)
   - [1.2. Standard score (Z-Test) advantage of the field](#12-standard-score-z-test-advantage-of-the-field)
@@ -16,10 +14,14 @@
   - [2.3. Data not used](#23-data-not-used)
 
 
-# Upcoming content.
-- Driver statistics for specific conditions (In writing).
-- Most successful Lap-1 drivers since 1996 (Conceptualisation phase).
-- Revision of *Qualification Dominance* sample data, to address the potentially negative impact on Z-Tests, by new team entries that underperform.
+# Planned content.
+- [x] Qualification Dominance
+  - [x] Percentage lead.
+  - [x] Z-Test means.
+  - [x] Z-Test medians
+  - [ ] Revision of  sample data, to address the potentially negative impact on Z-Tests, by new team entries that underperform.
+- [ ] Driver statistics for specific conditions (In writing).
+- [ ] Most successful Lap-1 drivers since 1996 (Conceptualisation phase).
 
 # 1. Qualification Dominance
 In multiple motorsport journalistic publications, user projects posted on reddit
