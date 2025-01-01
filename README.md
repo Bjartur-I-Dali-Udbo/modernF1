@@ -1,25 +1,74 @@
-# modernF1
-Hobbyist project on historical trends in Formula 1 and providing insights, where modern motorsport data-journalism usually neglects important factors.
+# Contents
+- [Contents](#contents)
+- [Upcoming content.](#upcoming-content)
+- [1. Qualification Dominance](#1-qualification-dominance)
+  - [1.1. Percentage pace advantage to closest competitor](#11-percentage-pace-advantage-to-closest-competitor)
+  - [1.2. Standard score (Z-Test) advantage of the field](#12-standard-score-z-test-advantage-of-the-field)
+  - [1.3. Robust standard score (Robust Z-Test) advantage to the field](#13-robust-standard-score-robust-z-test-advantage-to-the-field)
+  - [1.4. which F1 car is the most dominant qualifier?](#14-which-f1-car-is-the-most-dominant-qualifier)
+    - [1.4.1. Limitations of metods.](#141-limitations-of-metods)
+- [2. Data](#2-data)
+  - [2.1 Data Acquisition](#21-data-acquisition)
+    - [2.1.1. Ergast API (Deprecated after 2024 season)](#211-ergast-api-deprecated-after-2024-season)
+    - [2.1.2. f1db Open Source Formula 1 Database](#212-f1db-open-source-formula-1-database)
+    - [2.1.3. Other meta data](#213-other-meta-data)
+  - [2.2. Data Merging of key information.](#22-data-merging-of-key-information)
+  - [2.3. Data not used](#23-data-not-used)
 
-### Upcoming content.
-- Driver specific stats.
 
+# Upcoming content.
+- Driver statistics for specific conditions (In writing).
+- Most successful Lap-1 drivers since 1996 (Conceptualisation phase).
+- Revision of *Qualification Dominance* sample data, to address the potentially negative impact on Z-Tests, by new team entries that underperform.
 
 # 1. Qualification Dominance
-In countless of motorsport journalistic publications, reddit posts and other hobbyists I often see them exclusively use the overall rate of attaining pole position as a metric for how fast a car was at qualifying, without taking into consideration that this car could have gotten its statistic not in a dominant fashion. Other times are such opinions aided by converting gaps in qualifying times between cars into percentage units - which is quantifiable measure and far more robust to estimate _how fast_ a team is. But even, I still do not think this is good enough.
+In multiple motorsport journalistic publications, user projects posted on reddit
+and other analytical work I often see them exclusively use the overall rate of
+attaining pole position as a metric for how fast a car was at qualifying, without
+taking into consideration that this car could have gotten its statistic not in a
+dominant fashion. Other times are such opinions aided by converting gaps in
+qualifying times between cars into percentage units - which is quantifiable
+measure and far more robust to estimate _how fast_ a team is. But I do not believe
+this measure tells enough of a story to confidently state the most advantageous
+Formula 1 car in qualifying. Here I will introduce Z-Tests that instead consider
+the best time of every team, this builds a *range* where most teams fall into. This
+is utilised to consider if one or more teams are considerably better than the rest.
 
 
 ## 1.1. Percentage pace advantage to closest competitor
-On average the top team acquires pole most frequently or are within 0.3% of the pole time in every qualification session, providing a seasonal average of around 0.15% away from the pole time. The advantage estimate is how much lower this average value is to the closest competitors averae. Lets say the second fastest team has a score of 0.7% compared to your 0.15%, that is a difference of 0.55%. This difference is displayed below, were the fastest teams' score is shown relative to the second fastest.
+On average the top team acquires pole most frequently or are within 0.3% of the pole
+time in every qualification session, providing a seasonal average of around 0.15% away
+from the pole time. The advantage estimate is how much lower this average value is
+to the closest competitors averae. Lets say the second fastest team has a score of
+0.7% compared to your 0.15%, that is a difference of 0.55%. This difference is
+displayed below, were the fastest teams' score is shown relative to the second fastest.
 
 ![Percentage gaps visualised](figures/Fig_diffPCT_restricted_vertical_limits.png?raw=true)
 
-The most recent extreme domination in qualifying, was during the first three seasons of the V6-Hybrid-Engines, where Mercedes almost had a 1% qualifying pace advantage across three straight seasons, but is incomporable to the the late 1980s and early 1990s seasons of McLaren and Williams teams, whom were pusing towards 2%. While Alfa Romeo and Ferrari had significant advantages in the 1950s, a period with few constructors.
-This method does exemplify the biggest difference on absolute time, but does not take into account if perhaps _two_ teams are leagues above the rest and only battling with each other, _The Percentage Advantage_ would not be great and thus not materialise with this method.
+The most recent extreme domination in qualifying, was during the first three seasons
+of the V6-Hybrid-Engines, where Mercedes almost had a 1% qualifying pace advantage
+across three straight seasons, but is incomporable to the the late 1980s and early
+1990s seasons of McLaren and Williams teams, whom were pusing towards 2%.
+While Alfa Romeoand Ferrari had significant advantages in the 1950s, a period with few constructors.
+This method does exemplify the biggest difference on absolute time, but does not
+take into account if perhaps _two_ teams are leagues above the rest and only battling
+with each other, _The Percentage Advantage_ would not be great and thus not
+materialise with this method.
 
 ## 1.2. Standard score (Z-Test) advantage of the field
 
-Standard scores or Z-Scores, instead finds the standard deviation of all times (Only best time of each team). Which then scales the dots by how many standard deviations each team deviates from the average. This allows more than one team to be very far ahead of the rest, because this approach better presents each carmakers gap to _the average performance of the whole field_ rather than just the closest opponent.
+Standard scores or Z-Scores finds the standard deviation of all times used
+(Only best time of each team). Which scales the teams' times by how many standard
+deviations they deviate from the average. This allows more than one team to
+be very far ahead of the rest, because this approach better presents each carmakers
+gap to _the average performance of the whole field_ rather than just the closest opponent.
+
+For all qualifying sessions are the best times used for each team. This is regardless of what qualifying session the time was set. If a teams fastest lap was in Q2, then that time is used. 
+
+$$Z = \frac{\overline X_i - \mu}{\sigma}$$
+$$Z\text{: Standard Score}, \space \overline X_i \text{: Team i's best qualification time}, \space \mu\text{: Mean of all } \overline X \text{ times}, \space \sigma\text{: Standard deviation of sample}$$
+
+Presented below is the mean Z-Score for every team across a season.
 
 ![Standard Scores (Z-Scores) visualised](figures/Fig_Z_Scores_restricted_vertical_limits.png?raw=true)
 
@@ -30,6 +79,11 @@ Williams and McLaren of the late-1980s and early-1990s are still dominant, but A
 The above approach uses all data, but also allows all data to be equally impactful to the dataset, thus allowing anomalies to skew data in one direction and modify the standard deviation used to quantify the standard scores.
 
 A robust method, instead uses the median and eliminates the extreme impact of an anomaly like a backmarker team not in contention with any other teams.
+
+$$Z_r = \frac{\overline X_i - \mu}{\text{MAD} \cdot 1.4826}$$
+$$Z_r\text{: Standard Score}, \space \overline X_i \text{: Team i's best qualification time}, \space \mu\text{: Median of all } \overline X \text{ times}, \space \text{MAD: Median Absolute Deviation}$$
+
+Below is the median Z-Score for every team across a season.
 
 ![Robust Standard Scores (Robust-Z-Scores) visualised](figures/Fig_Robust_Z_Scores_restricted_vertical_limits.png?raw=true)
 
@@ -44,19 +98,38 @@ When adjusting for field pace (Z-Tests), are the advantages shuffled a bit, the 
 
 When further adjusting to the **Robust-Z-Test** to diminish the impact of very slow teams, are these ratings intact for the teams around the 1990 mark - except for the FW14B which jumps to an incredible 3.22 standard deviations away from the median team's performance, the greatest difference in Formula 1 history by a great margin.
 
-
 Based on Z-scores and absolute percentage advantages, are the FW14B and FW15C in my opinion the greatest Formula 1 qualifying cars ever made.
 
-### 1.4.1. Weaknesses of the approaches used.
+### 1.4.1. Limitations of metods.
 
-The 1988 McLaren qualifying advantage to the rest of its field, is smaller than what the team had in three of its next four seasons; **1989 (MP4/5)**, 1990 (MP5/5B), **1991 (MP4/6)** and **1992 (MP4/6B)** - this is an absolute shock to me, but it does make sense because many new teams were entering F1 during this period with operations they were not prepared for, **a large increase in slow entries/anomalies _will_ weaken the robust-Z-Test as the times set by newly established and slower teams will distribute qualifying times into; _new entries_ trying to catch up which are clearly gapped by the _existing_ field.** The robust method can handle a few anomalies, but two separate groups of data skews it so one standard deviation covers a greater time span - consequently will the top qualifiers have a greater Z-Score, giving an illusion of very strong development in the teams performance compared to the rest of the field. Likewise is the effect similar to how the 2010 Red Bull (RB6) falls behind the 2011 and 2013 cars during a period when three new teams entered F1.
+The 1988 McLaren qualifying advantage to the rest of its field, is smaller than
+what the team had in three of its next four seasons; **1989 (MP4/5)**, 1990 (MP5/5B),
+**1991 (MP4/6)** and **1992 (MP4/6B)** - this is an absolute shock to me, but it does
+make sense because many new teams were entering F1 during this period with operations
+they were not prepared for, **a large increase in slow entries/anomalies _will_**
+**weaken the robust-Z-Test as the times set by newly established and slower teams**
+**will distribute qualifying times into; _new entries_ trying to catch up which are**
+**clearly gapped by the _existing_ field.** The robust method can handle a few
+anomalies, but two separate groups of data skews it so one standard deviation covers
+a greater time span - consequently will the top qualifiers have a greater Z-Score,
+giving an illusion of very strong development in the teams performance compared to
+the rest of the field. Likewise is the effect similar to how the 2010 Red Bull (RB6)
+falls behind the 2011 and 2013 cars during a period when three new teams entered F1.
 
-Additionally are these data strictly seasonally dependent. There are instances of teams using their past years' car in the early races of the Formula 1 calendar, before introducing a finished chassis or their engine provider introduces a new engine. These are changes I have not addressed in this presentation.
+Additionally are these data strictly seasonally dependent. There are instances of
+teams using their past years' car in the early races of the Formula 1 calendar,
+before introducing a finished chassis or their engine provider introduces a new engine.
+These are changes I have not addressed in this presentation.
 
-# 2. Data acquisition
+# 2. Data
 If you are a fan of the totally not boring layout steps for the scientific method, I advise you to read this part. To your important information, this part of this scientific project, was not written with passionate love for the most repeated standard procedure known to mankind and I was very thorough to do it correctly the first time, so I won't have to do it again.
 
-## 2.1. **Ergast API** (https://ergast.com/mrd/) Now deprecated
+## 2.1 Data Acquisition
+
+Majority of data is acquired from open source database projects that track historical Formula 1 World Championship data. Some other data are assessed 
+
+### 2.1.1. Ergast API (Deprecated after 2024 season)
+- https://ergast.com/mrd/
 - Season List, Race Schedule  
 - Qualifying Results, Sprint Qualifying Results  
 - Lap Times, Pit Stops, Race Results, Finishing Status  
@@ -64,7 +137,8 @@ If you are a fan of the totally not boring layout steps for the scientific metho
 - Driver Information, Constructor Information, Circuit Information  
 
 
-## 2.2. **f1db Open Source Formula 1 Database** (https://github.com/f1db/f1db)  
+### 2.1.2. f1db Open Source Formula 1 Database
+- https://github.com/f1db/f1db
 - All drivers, constructors (including chassis), engine manufacturers (including engines)  
 - All tyre manufacturers, circuits and location data  
 - All seasons from 1950 to present; including:  
@@ -81,7 +155,7 @@ If you are a fan of the totally not boring layout steps for the scientific metho
 - driver of the day results  
 - standings
 
-## 2.3. Other meta data
+### 2.1.3. Other meta data
 - Front Row sizes.
 - Sources for Pre-1974. (No standardised grid layouts).
 - Old Autosport forum threads.
@@ -98,7 +172,7 @@ If you are a fan of the totally not boring layout steps for the scientific metho
 - Driver plotting colours.
 - Manually selected for the team they have been affiliated with for the longest time or a colour scheme familiar to the flag of their nationality.
 
-## 2.4. Data Merging of key information.
+## 2.2. Data Merging of key information.
 Ergast and f1db databases are largely identical, but there are cases in Ergast not having qualification data, but contains lap times of the race (1996-present), while f1db contains all qualification times ever set, but not lap times. Data is merged by using identifiers that are consistent in both datasets.  
 
 **Race events**  
@@ -116,6 +190,6 @@ Ergast and f1db databases are largely identical, but there are cases in Ergast n
 
 Drivers used to be able to share a seat and swap during tire changes - this happened regularly in the earlier years of Formula 1 World Championship. So there are instances of drivers having multiple finish positions as they contributed in more than one car at the same race.
 
-## 2.5. Data not used
+## 2.3. Data not used
 - 1950-1960 Indianapolis 500
 - Only Nino Farina entered the Indianapolis 500 while driving a full season in F1, while most Indianapolis 500 teams did not participate in F1 at all. Thus are these results not included in the analysis.
