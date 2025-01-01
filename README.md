@@ -9,9 +9,12 @@
   - [2.1 Data Acquisition](#21-data-acquisition)
     - [2.1.1. Ergast API (Deprecated after 2024 season)](#211-ergast-api-deprecated-after-2024-season)
     - [2.1.2. f1db Open Source Formula 1 Database](#212-f1db-open-source-formula-1-database)
-    - [2.1.3. Other meta data](#213-other-meta-data)
+    - [2.1.3. Non-database meta data.](#213-non-database-meta-data)
+      - [2.1.3.1. Front Row conditions.](#2131-front-row-conditions)
+      - [2.1.3.2. Customised color schemes.](#2132-customised-color-schemes)
   - [2.2. Data Merging of key information.](#22-data-merging-of-key-information)
   - [2.3. Data not used](#23-data-not-used)
+
 
 
 # Planned content.
@@ -19,7 +22,8 @@
   - [x] Percentage lead.
   - [x] Z-Test means.
   - [x] Z-Test medians
-  - [ ] Revision of  sample data, to address the potentially negative impact on Z-Tests, by new team entries that underperform.
+  - [ ] Adapt to consider specific chassis designs.
+  - [ ] Revision of sample data, to address the potentially negative impact on Z-Tests of new team entries that underperform.
 - [ ] Driver statistics for specific conditions (In writing).
 - [ ] Most successful Lap-1 drivers since 1996 (Conceptualisation phase).
 
@@ -108,15 +112,8 @@ The 1988 McLaren qualifying advantage to the rest of its field, is smaller than
 what the team had in three of its next four seasons; **1989 (MP4/5)**, 1990 (MP5/5B),
 **1991 (MP4/6)** and **1992 (MP4/6B)** - this is an absolute shock to me, but it does
 make sense because many new teams were entering F1 during this period with operations
-they were not prepared for, **a large increase in slow entries/anomalies _will_**
-**weaken the robust-Z-Test as the times set by newly established and slower teams**
-**will distribute qualifying times into; _new entries_ trying to catch up which are**
-**clearly gapped by the _existing_ field.** The robust method can handle a few
-anomalies, but two separate groups of data skews it so one standard deviation covers
-a greater time span - consequently will the top qualifiers have a greater Z-Score,
-giving an illusion of very strong development in the teams performance compared to
-the rest of the field. Likewise is the effect similar to how the 2010 Red Bull (RB6)
-falls behind the 2011 and 2013 cars during a period when three new teams entered F1.
+they were not prepared for, while the frontrunning teams were gaining significant pace during these years, **this large increase in slow entries/anomalies _will_ weaken the robust-Z-Test as the times set by newly established and slower teams will distribute qualifying times into; _new entries_ trying to catch up which are clearly gapped by the _existing_ field.** The robust method can handle a few anomalies, but two separate groups of data skews it so one standard deviation covers
+a greater time span - consequently will the top qualifiers have a greater Z-Score, giving an illusion of very strong development in the teams performance compared to the rest of the field. Likewise is the effect similar to how the 2010 Red Bull (RB6) falls behind the 2011 and 2013 cars during a period when three new teams entered F1.
 
 Additionally are these data strictly seasonally dependent. There are instances of
 teams using their past years' car in the early races of the Formula 1 calendar,
@@ -157,22 +154,31 @@ Majority of data is acquired from open source database projects that track histo
 - driver of the day results  
 - standings
 
-### 2.1.3. Other meta data
-- Front Row sizes.
-- Sources for Pre-1974. (No standardised grid layouts).
-- Old Autosport forum threads.
-- Result websites.
-- Pictures of starting grids.
-- 1974-1980
-- 2x2 cars lined up side by side, standardised.
-- 1981-present.
-- 1x1x1cars line up, separated 8m length wise and width offset with a track dependent value, standardised.
-- 1980 Monaco GP used such a line up, or similar.
-- **TODO:** Identify race starts that deviate from regulations.
+### 2.1.3. Non-database meta data.
+Some data is not acquired in databases or must be scraped from fanmade webpages.
+
+#### 2.1.3.1. Front Row conditions.
+Formula 1 World Championship has introduced standardisations for grid rows at different times.
+- 1950-1973, no uniform standard grid layout. 2, 3 and 4 cars lined up side-by-side possible.
+  - Old Autosport forum threads.
+  - Result websites.
+  - Pictures of starting grids.
+- 1974-1977, 2x2 cars lined up side by side.
+  - 12 meters between cars.
+- 1978-1980, 2x2 cars lined up side by side.
+  - Grid distance increased to 14 meters. 
+- 1981-1986, 1x1s1 rows.
+  - 1 car on each row, position of cars on each row are interchanging between left and right lane - or vice versa.
+  - Distance seperation is 7 meters.
+  - Total distance between cars on same lane is 14 meters, same as prior to 1981.
+- 1987-present, 1x1x1 rows.
+  - Distance between cars increased to 8 meters, resulting in 16 meters between cars on same lane.
+
+#### 2.1.3.2. Customised color schemes.
 - Constructor plotting colours
-- Manually selected for most common colours used in teams history.
+  - Manually selected for most common colours used in teams history.
 - Driver plotting colours.
-- Manually selected for the team they have been affiliated with for the longest time or a colour scheme familiar to the flag of their nationality.
+  - Manually selected for the team they have been affiliated with for the longest time or a colour scheme familiar to the flag of their nationality.
 
 ## 2.2. Data Merging of key information.
 Ergast and f1db databases are largely identical, but there are cases in Ergast not having qualification data, but contains lap times of the race (1996-present), while f1db contains all qualification times ever set, but not lap times. Data is merged by using identifiers that are consistent in both datasets.  
