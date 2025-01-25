@@ -1,12 +1,39 @@
+# Planned content.
 
-# 2. Data
+- [x] Qualification Dominance
+  - [x] Percentage lead.
+  - [x] Z-Test means.
+  - [x] Z-Test medians
+  - **Revisions and additions**
+    - [ ] Adapt to consider specific chassis designs.
+    - [ ] Address the potentially negative impact on Z-Tests that new underperforming team entries induce.
+    - [ ] Expand to all times set in qualifying.
+- [ ] Driver statistics for specific condition.
+  - [x] Conceptualisation.
+  - [x] Data processing.
+  - [x] Analysis.
+  - [ ] Graphic design.
+- [ ] Drivers with most Lap-1 overtakes.
+  - [x] Conceptualisation.
+  - [x] Data processing
+  - [ ] Analysis.
+  - [ ] Graphic design.
+- [ ] Changes to importnance of pole position.
+  - [ ] Conceptualisation.
+  - [ ] Data Processing.
+    - [x] Acquired necessary data.
+  - [ ] Analysis.
+  - [ ] Graphic design
+
+
+# 1. Data
 If you are a fan of the totally not boring layout steps for the scientific method, I advise you to read this part. To your important information, this part of this scientific project, was not written with passionate love for the most repeated standard procedure known to mankind and I was very thorough to do it correctly the first time, so I won't have to do it again.
 
-## 2.1 Data Acquisition
+## 1.1 Data Acquisition
 
 Majority of data is acquired from open source database projects that track historical Formula 1 World Championship data. Some other data are assessed 
 
-### 2.1.1. Ergast API (Deprecated after 2024 season)
+### 1.1.1. Ergast API (Deprecated after 2024 season)
 - https://ergast.com/mrd/
 - Season List, Race Schedule  
 - Qualifying Results, Sprint Qualifying Results  
@@ -15,7 +42,7 @@ Majority of data is acquired from open source database projects that track histo
 - Driver Information, Constructor Information, Circuit Information  
 
 
-### 2.1.2. f1db Open Source Formula 1 Database
+### 1.1.2. f1db Open Source Formula 1 Database
 - https://github.com/f1db/f1db
 - All drivers, constructors (including chassis), engine manufacturers (including engines)  
 - All tyre manufacturers, circuits and location data  
@@ -33,10 +60,10 @@ Majority of data is acquired from open source database projects that track histo
 - driver of the day results  
 - standings
 
-### 2.1.3. Non-database meta data.
+### 1.1.3. Non-database meta data.
 Some data is not acquired in databases or must be scraped from fanmade webpages.
 
-#### 2.1.3.1. Front Row conditions.
+#### 1.1.3.1. Front Row conditions.
 Formula 1 World Championship has introduced standardisations for grid rows at different times.
 - 1950-1973, no uniform standard grid layout. 2, 3 and 4 cars lined up side-by-side possible.
   - Old Autosport forum threads.
@@ -53,13 +80,13 @@ Formula 1 World Championship has introduced standardisations for grid rows at di
 - 1987-present, 1x1x1 rows.
   - Distance between cars increased to 8 meters, resulting in 16 meters between cars on same lane.
 
-#### 2.1.3.2. Customised color schemes.
+#### 1.1.3.2. Customised color schemes.
 - Constructor plotting colours
   - Manually selected for most common colours used in teams history.
 - Driver plotting colours.
   - Manually selected for the team they have been affiliated with for the longest time or a colour scheme familiar to the flag of their nationality.
 
-## 2.2. Data Merging of key information.
+## 1.2. Data Merging of key information.
 Ergast and f1db databases are largely identical, but there are cases in Ergast not having qualification data, but contains lap times of the race (1996-present), while f1db contains all qualification times ever set, but not lap times. Data is merged by using identifiers that are consistent in both datasets.  
 
 **Race events**  
@@ -77,6 +104,6 @@ Ergast and f1db databases are largely identical, but there are cases in Ergast n
 
 Drivers used to be able to share a seat and swap during tire changes - this happened regularly in the earlier years of Formula 1 World Championship. So there are instances of drivers having multiple finish positions as they contributed in more than one car at the same race.
 
-## 2.3. Data not used
+## 1.3. Data not used
 - 1950-1960 Indianapolis 500
-- Only Nino Farina entered the Indianapolis 500 while driving a full season in F1, while most Indianapolis 500 teams did not participate in F1 at all. Thus are these results not included in the analysis.
+ - Only Nino Farina entered the Indianapolis 500 while driving a full season in F1, while most Indianapolis 500 teams did not participate in F1 at all. Thus are these results not included in the analysis.
