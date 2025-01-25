@@ -5,27 +5,6 @@
   - [1.3. Robust standard score (Robust Z-Test) advantage to the field](#13-robust-standard-score-robust-z-test-advantage-to-the-field)
   - [1.4. which F1 car is the most dominant qualifier?](#14-which-f1-car-is-the-most-dominant-qualifier)
     - [1.4.1. Limitations of metods.](#141-limitations-of-metods)
-- [2. Data](#2-data)
-  - [2.1 Data Acquisition](#21-data-acquisition)
-    - [2.1.1. Ergast API (Deprecated after 2024 season)](#211-ergast-api-deprecated-after-2024-season)
-    - [2.1.2. f1db Open Source Formula 1 Database](#212-f1db-open-source-formula-1-database)
-    - [2.1.3. Non-database meta data.](#213-non-database-meta-data)
-      - [2.1.3.1. Front Row conditions.](#2131-front-row-conditions)
-      - [2.1.3.2. Customised color schemes.](#2132-customised-color-schemes)
-  - [2.2. Data Merging of key information.](#22-data-merging-of-key-information)
-  - [2.3. Data not used](#23-data-not-used)
-
-
-
-# Planned content.
-- [x] Qualification Dominance
-  - [x] Percentage lead.
-  - [x] Z-Test means.
-  - [x] Z-Test medians
-  - [ ] Adapt to consider specific chassis designs.
-  - [ ] Revision of sample data, to address the potentially negative impact on Z-Tests of new team entries that underperform.
-- [ ] Driver statistics for specific conditions (In writing).
-- [ ] Most successful Lap-1 drivers since 1996 (Conceptualisation phase).
 
 # 1. Qualification Dominance
 In multiple motorsport journalistic publications, user projects posted on reddit
