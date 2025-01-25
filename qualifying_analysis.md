@@ -1,4 +1,3 @@
-- [Planned content.](#planned-content)
 - [1. Qualification Dominance](#1-qualification-dominance)
   - [1.1. Percentage pace advantage to closest competitor](#11-percentage-pace-advantage-to-closest-competitor)
   - [1.2. Standard score (Z-Test) advantage of the field](#12-standard-score-z-test-advantage-of-the-field)
