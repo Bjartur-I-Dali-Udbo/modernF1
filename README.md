@@ -1,37 +1,19 @@
-# Planned content.
+# modernF1
 
-- [x] Qualification Dominance
-  - [x] Percentage lead.
-  - [x] Z-Test means.
-  - [x] Z-Test medians
-  - **Revisions and additions**
-    - [ ] Adapt to consider specific chassis designs.
-    - [ ] Address the potentially negative impact on Z-Tests that new underperforming team entries induce.
-    - [ ] Expand to all times set in qualifying.
-- [ ] Driver statistics for specific condition.
-  - [x] Conceptualisation.
-  - [x] Data processing.
-  - [x] Analysis.
-  - [ ] Graphic design.
-- [ ] Drivers with most Lap-1 overtakes.
-  - [x] Conceptualisation.
-  - [x] Data processing
-  - [ ] Analysis.
-  - [ ] Graphic design.
-- [ ] Changes to importnance of pole position.
-  - [ ] Conceptualisation.
-  - [ ] Data Processing.
-    - [x] Acquired necessary data.
-  - [ ] Analysis.
-  - [ ] Graphic design
+### Using historical Formula 1 data to visualise statistical information modern motorsport journalism lacks
+
+This repository is an ongoing hobby project to provide answers to debates that are mostly unanswered. I pick one subject or myth commonoly raised in comment sections of discussion boards, which I 
+
+## Projects
+- [Qualifying Analysis of the best performing team entry (1950-2024)](https://github.com/Bjartur-I-Dali-Udbo/modernF1/blob/main/qualifying_analysis.md)
 
 
 # 1. Data
-If you are a fan of the totally not boring layout steps for the scientific method, I advise you to read this part. To your important information, this part of this scientific project, was not written with passionate love for the most repeated standard procedure known to mankind and I was very thorough to do it correctly the first time, so I won't have to do it again.
+If you are a fan of the totally not boring layout steps for the scientific method, I advise you to read this part. To your important information, this part of this project, was not written with passionate love for the most repeated standard procedure known to mankind and I was very thorough to do it correctly the first time, so I won't have to do it again.
 
 ## 1.1 Data Acquisition
 
-Majority of data is acquired from open source database projects that track historical Formula 1 World Championship data. Some other data are assessed 
+Data is acquired from open source database projects that track historical Formula 1 World Championship data. While grid layouts are assembled manually.
 
 ### 1.1.1. Ergast API (Deprecated after 2024 season)
 - https://ergast.com/mrd/
@@ -106,4 +88,4 @@ Drivers used to be able to share a seat and swap during tire changes - this happ
 
 ## 1.3. Data not used
 - 1950-1960 Indianapolis 500
- - Only Nino Farina entered the Indianapolis 500 while driving a full season in F1, while most Indianapolis 500 teams did not participate in F1 at all. Thus are these results not included in the analysis.
+  - Only Nino Farina entered the Indianapolis 500 while driving a full season in F1, while most Indianapolis 500 teams did not participate in F1 at all. Thus are these results not included in the analysis.
