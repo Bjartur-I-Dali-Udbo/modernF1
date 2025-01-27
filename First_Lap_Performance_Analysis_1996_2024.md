@@ -118,7 +118,7 @@ Like in Fernando Alonso's good years, does Max Verstappen consistently perform l
 
 In their years together, has Max Verstappen on average throughout the season gained positions, when his own DNFs and retirements are excluded, but also his overtakes on other cars. In 2023 and 2024 - Serio Perez generally lost positions even when he started on average around 9th place.
 
-## 2.2.1.
+## 2.2.1. Seasonal results: Max Verstappen and Sergio Perez in Red Bull Racing (2021-2024)
 
 | Driver_Season       |   d (Position change) |   d (DNFs) |   d (Pit stops) |   d (DNF / Pit adjusted) |   Start Position |
 |:--------------------|----------------------:|-----------:|----------------:|-------------------------:|-----------------:|
