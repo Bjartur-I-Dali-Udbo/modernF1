@@ -68,7 +68,7 @@ The main observation to make is that all of these drivers are in general perform
 
 ![Seasonal Lap 0 performance of Kevin Magnussen and Antonio Giovinazzi](figures/fig_2x2_seasonal_filtered_giovinazzi_kevin_magnussen_alonso.png?raw=true)
 
-Kevin Magnussen and Giovinazzi are rather consistently in the top half relative to their start position, somewhat confirming my bias, I had personally an expectation their statistics would stand out mores significantly. The 2020 season of Giovinazzi I a
+Kevin Magnussen and Giovinazzi are rather consistently in the top half relative to their start position, somewhat confirming my bias, I had personally an expectation their statistics would stand out mores significantly. The 2020 season of Giovinazzi came to me as expected, but I had the impression he had performed better in 2021.
 
 ## 2.1.1. Data results: Kevin Magnussen, Antonio Giovinazzi and Fernando Alonso.
 
