@@ -48,13 +48,13 @@ Continuing from 1.2 with cleaned data, are all drivers' seasonal first lap perfo
 As expected, is the impact of positions lost from DNFs greatest in drivers that started races on average in strong positions, as a single retirement can cost them more than ten lost positions.
 
 
-![Seasonal Lap 0 performance all entries sorted by drivers season](figures/fig_2x2_seasonal_NOT_filtered.png?raw=true)
+![Seasonal Lap 0 performance all entries sorted by drivers season](figures/fig_2x2_seasonal_NOT_filtered_.png?raw=true)
 
 In average positions gained or lost from pit stops, is there are a single instance of a driver gaining 11 positions on average in the first lap -- this is also the only instance of Markus Winkelhock entering a Formula 1 Grand Prix, where he was the only car to switch to Extreme Wet tyres after the formation lap, allowing him to gain eleven positions in one lap - all whom where drivers that took a pit stop at the end of the first lap.
 
 Filtering it to be drivers who had at least five race starts for a season to be considered, cleans up the data by a great deal and makes it far more legible.
 
-![More than five entries per season. Seasonal Lap 0 performance of all drivers](figures/fig_2x2_seasonal_filtered.png?raw=true)
+![More than five entries per season. Seasonal Lap 0 performance of all drivers](figures/fig_2x2_seasonal_filtered_.png?raw=true)
 
 Just like with the DNF figures (Top right), is there a similar bias in drivers who start close to the front to lose more positions to pit stops than those starting further that - this is as expected.
 
@@ -64,7 +64,7 @@ Overall throughout the past ten or so Formula 1 seasons, I got my own impression
 
 # 2.1. Kevin Magnussen, Antonio Giovinazzi and Fernando Alonso
 
-The main observation to make is that all of these drivers are in general performing well on the first lap, when considering *where* in relation to those who started on similar start positions. Alonso's 2006 season stands out strikingly alone in the plot adjusted for DNFs and pit stops. While his 2012 season had an actual average of -0.2, but when adjusting for DNFs and pit stops, it jumps up to 1.35 overtakes on average that season.
+The main observation to make is that all of these drivers are in general performing well on the first lap, when considering *where* in relation to those who started on similar positions. Alonso's 2006 season stands out strikingly alone in the plot adjusted for DNFs and pit stops, overtaking 1.33 cars per race on average and is still a whopping 1.28 when adjusted for DNFs/pits. While his 2012 season had an actual average of -0.2, but excluding entires where he retired or pitted on the first lap, it jumps to 1.50 overtakes on average that year.
 
 ![Seasonal Lap 0 performance of Kevin Magnussen and Antonio Giovinazzi](figures/fig_2x2_seasonal_filtered_giovinazzi_kevin_magnussen_alonso.png?raw=true)
 
@@ -75,37 +75,58 @@ Kevin Magnussen and Giovinazzi are rather consistently in the top half relative 
 Table below presents season averages. Positive values signal positions gained, negative values signal positions lost.
 
 $\text{Adjusted for pit and DNF} = \text{Position changes} - \text{Changes due to DNFs} - \text{Changes due to pit stops}$
+| Driver_Season        |   d (Position change) |   d (DNFs) |   d (Pit stops) |   d (DNF / Pit adjusted) |   Start Position |
+|:---------------------|----------------------:|-----------:|----------------:|-------------------------:|-----------------:|
+| Alonso 2010          |                 -1.11 |       0.11 |           -0.47 |                    -0.65 |             5.79 |
+| Alonso 2021          |                  0.05 |       0.23 |            0.36 |                    -0.55 |            10.41 |
+| Alonso 2009          |                 -0.53 |      -0.41 |            0.29 |                    -0.44 |             8.88 |
+| Alonso 2007          |                 -0.29 |       0.00 |            0.06 |                    -0.31 |             3.18 |
+| Kevin Magnussen 2018 |                  0.24 |       0.19 |            0.19 |                    -0.21 |            10.29 |
+| Alonso 2017          |                  0.00 |       0.16 |            0.21 |                    -0.12 |            12.68 |
+| Giovinazzi 2019      |                  0.67 |       0.14 |            0.52 |                     0.00 |            13.81 |
+| Alonso 2001          |                  0.71 |       0.53 |            0.18 |                     0.00 |            19.47 |
+| Kevin Magnussen 2023 |                  0.86 |      -0.05 |            0.32 |                     0.11 |            15.05 |
+| Kevin Magnussen 2014 |                 -0.68 |       0.05 |           -0.95 |                     0.12 |             8.79 |
+| Alonso 2024          |                  0.33 |       0.12 |            0.00 |                     0.21 |             9.42 |
+| Alonso 2005          |                  0.26 |       0.05 |           -0.16 |                     0.39 |             3.95 |
+| Alonso 2023          |                  0.09 |       0.14 |           -0.36 |                     0.40 |             6.86 |
+| Giovinazzi 2021      |                  0.50 |       0.23 |           -0.32 |                     0.47 |            13.59 |
+| Alonso 2014          |                  0.68 |       0.11 |            0.11 |                     0.47 |             6.53 |
+| Alonso 2008          |                  0.17 |      -0.39 |            0.11 |                     0.47 |             6.89 |
+| Alonso 2011          |                  0.63 |       0.11 |            0.05 |                     0.47 |             4.58 |
+| Kevin Magnussen 2019 |                  0.71 |       0.10 |            0.14 |                     0.50 |            11.90 |
+| Kevin Magnussen 2017 |                  1.20 |       0.35 |            0.05 |                     0.75 |            14.10 |
+| Alonso 2003          |                  1.06 |       0.19 |            0.00 |                     0.80 |             7.88 |
+| Alonso 2013          |                  0.89 |       0.00 |            0.05 |                     0.84 |             6.00 |
+| Kevin Magnussen 2022 |                  0.23 |      -0.14 |           -0.45 |                     0.84 |            12.82 |
+| Kevin Magnussen 2016 |                  0.95 |       0.33 |           -0.29 |                     0.88 |            17.10 |
+| Alonso 2016          |                  2.20 |       0.40 |            0.70 |                     1.00 |            12.10 |
+| Kevin Magnussen 2024 |                  1.27 |       0.14 |            0.00 |                     1.19 |            14.64 |
+| Alonso 2006          |                  1.33 |       0.06 |            0.00 |                     1.28 |             4.28 |
+| Giovinazzi 2020      |                  2.71 |       0.41 |            0.59 |                     1.50 |            16.65 |
+| Alonso 2012          |                 -0.20 |      -1.60 |            0.05 |                     1.50 |             6.10 |
+| Alonso 2004          |                  1.44 |       0.06 |           -0.17 |                     1.65 |             7.56 |
+| Kevin Magnussen 2020 |                  2.41 |       0.41 |            0.18 |                     1.80 |            16.88 |
+| Alonso 2015          |                  1.56 |       0.22 |           -0.22 |                     1.92 |            15.61 |
 
-| Driver_Season       |   Position change (d) |   d DNFs |   d Pit stops |   Adjusted for pit and DNF |   Start Position |
-|:---------------------|-------------------:|----------------------:|---------------------------:|---------------------------:|-----------------:|
-| Alonso 2010          |              -1.11 |                  0.11 |                      -0.47 |                      -0.74 |             5.79 |
-| Alonso 2021          |               0.05 |                  0.23 |                       0.36 |                      -0.55 |            10.41 |
-| Alonso 2009          |              -0.53 |                 -0.41 |                       0.29 |                      -0.41 |             8.88 |
-| Alonso 2017          |               0    |                  0.16 |                       0.21 |                      -0.37 |            12.68 |
-| Alonso 2007          |              -0.29 |                  0    |                       0.06 |                      -0.35 |             3.18 |
-| Kevin Magnussen 2018 |               0.24 |                  0.19 |                       0.19 |                      -0.14 |            10.29 |
-| Giovinazzi 2019      |               0.67 |                  0.14 |                       0.52 |                       0    |            13.81 |
-| Alonso 2001          |               0.71 |                  0.53 |                       0.18 |                       0    |            19.47 |
-| Alonso 2024          |               0.33 |                  0.12 |                       0    |                       0.21 |             9.42 |
-| Kevin Magnussen 2014 |              -0.68 |                  0.05 |                      -0.95 |                       0.21 |             8.79 |
-| Alonso 2023          |               0.09 |                  0.14 |                      -0.36 |                       0.32 |             6.86 |
-| Alonso 2005          |               0.26 |                  0.05 |                      -0.16 |                       0.37 |             3.95 |
-| Alonso 2008          |               0.17 |                 -0.39 |                       0.11 |                       0.44 |             6.89 |
-| Alonso 2014          |               0.68 |                  0.11 |                       0.11 |                       0.47 |             6.53 |
-| Alonso 2011          |               0.63 |                  0.11 |                       0.05 |                       0.47 |             4.58 |
-| Kevin Magnussen 2019 |               0.71 |                  0.1  |                       0.14 |                       0.48 |            11.9  |
-| Kevin Magnussen 2023 |               0.86 |                 -0.05 |                       0.32 |                       0.59 |            15.05 |
-| Giovinazzi 2021      |               0.5  |                  0.23 |                      -0.32 |                       0.59 |            13.59 |
-| Kevin Magnussen 2017 |               1.2  |                  0.35 |                       0.05 |                       0.8  |            14.1  |
-| Kevin Magnussen 2022 |               0.23 |                 -0.14 |                      -0.45 |                       0.82 |            12.82 |
-| Alonso 2013          |               0.89 |                  0    |                       0.05 |                       0.84 |             6    |
-| Alonso 2003          |               1.06 |                  0.19 |                       0    |                       0.88 |             7.88 |
-| Kevin Magnussen 2016 |               0.95 |                  0.33 |                      -0.29 |                       0.9  |            17.1  |
-| Alonso 2016          |               2.2  |                  0.4  |                       0.7  |                       1.1  |            12.1  |
-| Kevin Magnussen 2024 |               1.27 |                  0.14 |                       0    |                       1.14 |            14.64 |
-| Alonso 2006          |               1.33 |                  0.06 |                       0    |                       1.28 |             4.28 |
-| Alonso 2012          |              -0.2  |                 -1.6  |                       0.05 |                       1.35 |             6.1  |
-| Alonso 2004          |               1.44 |                  0.06 |                      -0.17 |                       1.56 |             7.56 |
-| Alonso 2015          |               1.56 |                  0.22 |                      -0.22 |                       1.56 |            15.61 |
-| Giovinazzi 2020      |               2.71 |                  0.41 |                       0.59 |                       1.71 |            16.65 |
-| Kevin Magnussen 2020 |               2.41 |                  0.41 |                       0.18 |                       1.82 |            16.88 |
+
+# 2.2. Max Verstappen and Sergio Perez in Red Bull Racing (2021-2024)
+
+Like in Fernando Alonso's good years, does Max Verstappen consistently perform like the best who start at similar positions. His 2021 season is especially notworthy, his only first lap retirement of te year lowers his overall seasonal value by -0.82 and his first lap pit stops reduces his position by -0.27 on average. When these races are excluded does he overtake 0.43 cars per race on the first lap, with a starting position that only allows him to overtake 1-2 cars per race. A number Perez narrowly tops in the same year of 0.43, when he had seven cars to overtake on average.
+
+![Seasonal Lap 0 performance of Kevin Magnussen and Antonio Giovinazzi](figures/fig_2x2_seasonal_filtered_max_verstappen_perez.png?raw=true)
+
+In their years together, has Max Verstappen on average throughout the season gained positions, when his own DNFs and retirements are excluded, but also his overtakes on other cars. In 2023 and 2024 - Serio Perez generally lost positions even when he started on average around 9th place.
+
+## 2.2.1.
+
+| Driver_Season       |   d (Position change) |   d (DNFs) |   d (Pit stops) |   d (DNF / Pit adjusted) |   Start Position |
+|:--------------------|----------------------:|-----------:|----------------:|-------------------------:|-----------------:|
+| Perez 2023          |                 -0.73 |      -0.59 |           -0.32 |                    -0.19 |             9.23 |
+| Perez 2024          |                 -0.46 |      -0.42 |            0.00 |                    -0.05 |             9.38 |
+| Perez 2022          |                 -0.50 |       0.09 |           -0.68 |                     0.20 |             4.82 |
+| Max Verstappen 2023 |                  0.32 |       0.05 |            0.05 |                     0.24 |             3.18 |
+| Max Verstappen 2022 |                  0.45 |       0.09 |            0.00 |                     0.33 |             3.36 |
+| Max Verstappen 2024 |                  0.33 |       0.00 |            0.00 |                     0.33 |             3.54 |
+| Max Verstappen 2021 |                 -0.73 |      -0.82 |           -0.27 |                     0.40 |             2.86 |
+| Perez 2021          |                  0.00 |      -0.55 |            0.09 |                     0.43 |             8.00 |
