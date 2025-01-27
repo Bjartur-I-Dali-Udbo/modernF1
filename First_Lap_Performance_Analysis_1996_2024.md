@@ -76,7 +76,7 @@ Table below presents season averages. Positive values signal positions gained, n
 
 $\text{Adjusted for pit and DNF} = \text{Position changes} - \text{Changes due to DNFs} - \text{Changes due to pit stops}$
 
-| Driver_Season        |   Position changes |   Changes due to DNFs |   Changes due to pit stops |   Adjusted for pit and DNF |   Start Position |
+| Driver Season        |   Position changes |   Changes due to DNFs |   Changes due to pit stops |   Adjusted for pit and DNF |   Start Position |
 |:---------------------|-------------------:|----------------------:|---------------------------:|---------------------------:|-----------------:|
 | Alonso 2010          |              -1.11 |                  0.11 |                      -0.47 |                      -0.74 |             5.79 |
 | Alonso 2021          |               0.05 |                  0.23 |                       0.36 |                      -0.55 |            10.41 |
