@@ -6,6 +6,7 @@ This repository is an ongoing hobby project to provide answers to debates that a
 
 ## Projects
 - [Qualifying Analysis of the best performing team entry (1950-2024)](https://github.com/Bjartur-I-Dali-Udbo/modernF1/blob/main/qualifying_analysis.md)
+- [First Lap Performance Analysis (1996-2024)](https://github.com/Bjartur-I-Dali-Udbo/modernF1/blob/main/First_Lap_Performance_Analysis_1996_2024.md)
 
 
 # 1. Data
