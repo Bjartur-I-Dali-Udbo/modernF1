@@ -116,7 +116,7 @@ Like in Fernando Alonso's good years, does Max Verstappen consistently perform l
 
 ![Seasonal Lap 0 performance of Kevin Magnussen and Antonio Giovinazzi](figures/fig_2x2_seasonal_filtered_max_verstappen_perez.png?raw=true)
 
-In their years together, has Max Verstappen on average throughout the season gained positions, when his own DNFs and retirements are excluded, but also his overtakes on other cars. In 2023 and 2024 - Serio Perez generally lost positions even when he started on average around 9th place.
+In their years together, has Max Verstappen on average throughout the season gained positions, when his own DNFs and retirements are excluded, but also his overtakes on other cars. In 2023 and 2024 - Sergio Perez generally lost positions even when he started on average around 9th place.
 
 ## 2.2.1. Seasonal results: Max Verstappen and Sergio Perez in Red Bull Racing (2021-2024)
 
