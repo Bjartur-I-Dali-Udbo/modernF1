@@ -23,7 +23,9 @@ Here I look at the available lap time data from 1996 to the end of 2024 season, 
 
 
 
+### Update 05/02/2025
 
+Re-adjusted all figures. The average start position in each figure, now correctly represents the average start positions *for that specific* criteria - and not the whole season average.
 
 # 1. Positions gained/lost on the first lap.
 The initial anomaly is the data (Ergast) displays starting positions at grid position 0, which are cars starting from the pit-lane.
